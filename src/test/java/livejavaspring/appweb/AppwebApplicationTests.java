@@ -1,10 +1,10 @@
-package appdopsilldev.live;
+package livejavaspring.appweb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LiveApplicationTests {
+class AppwebApplicationTests {
 
 	@Test
 	void contextLoads() {

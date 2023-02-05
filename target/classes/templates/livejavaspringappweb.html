@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Java SpringBoot App Web</title>
+</head>
+<body>
+    <h2>Live - Java SpringBoot - Aplicação Web</h2>
+    
+    <div th:unless="${#lists.isEmpty(livejavaspringEntity)}">
+		<dl th:each="livejavaspringEntity : ${livejavaspringEntity}">
+			<dt class="bookHeadline">
+				<span th:text="${livejavaspringEntity.titulo}">Titulo</span> by <span
+					th:text="${livejavaspringEntity.descricao}">Descrição</span>
+
+        </dt>
+        <dd class="bookDescription">
+            <span th:if="${livejavaspringEntity.descricao}" th:text="${livejavaspringEntity.description}">Descrição</span>
+            <span th:if="${livejavaspringEntity.descricao eq null}">Descrição não disponível</span>
+        </dd>
+    </dl>
+    </div>
+    <div th:if="${#lists.isEmpty(livejavaspringEntity)}">
+        <p>você não tem titulos em sua lista de titulos</p>  
+    </div>
+    <hr />    
+    <h3>Adicionar Titulo</h3>
+    <form action="" method="post">
+        <label for="titulo">Titulo: </label> <input type="text" name="titulo" size="50"></input><br />
+        <label for="descricao">Descrição: </label><br />
+        <textarea name="descricao cols="80" rows="10"></textarea>
+        <br /> <input type="submit" value=""></input>
+    </form>
+</dl>
+</div>
+</body>
+</html>
